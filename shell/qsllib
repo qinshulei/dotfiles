@@ -21,6 +21,12 @@ function repofzf(){
     fi
 }
 
+function cdlast() {
+    ls -rt | tail -1 | xsel -b
+    dir_name=$(xsel -b)
+    cd ${dir_name}
+}
+
 alias flashap="
 fastboot flash boot boot.img;
 fastboot flash system system.img;
