@@ -27,6 +27,10 @@ function cdlast() {
     cd ${dir_name}
 }
 
+function cplast() {
+    ls -rt | tail -1 | tr -d '\n' | xsel -b
+}
+
 alias flashap="
 fastboot flash boot boot.img;
 fastboot flash system system.img;
