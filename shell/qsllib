@@ -31,6 +31,16 @@ function cplast() {
     ls -rt | tail -1 | tr -d '\n' | xsel -b
 }
 
+function alertover () {
+    content=$*
+    # alertover
+    curl -s \
+         --form-string "source=s-138cdc2f-8624-461c-8cdf-3ebf5931" \
+         --form-string "receiver=g-364ec0e4-5c27-4fbb-a899-040eea16" \
+         --form-string "content=${content}" \
+         https://api.alertover.com/v1/alert
+}
+
 alias flashap="
 fastboot flash boot boot.img;
 fastboot flash system system.img;
