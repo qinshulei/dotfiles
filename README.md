@@ -3,7 +3,7 @@ backup dotfiles
 
 ## useage
 ```
+# git clone dotfiles_repo
 # add to ~/.bashrc or ~/.zshrc
-export PATH="/home/qinshulei/dotfiles/bin:$PATH"
-source ~/dotfiles/shell/qsllib
+source /home/qinshulei/dotfiles/init.sh
 ```

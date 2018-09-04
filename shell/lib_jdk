@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# jdk alias
+alias jdk6='export JAVA_HOME=$JAVA_6_HOME ; export PATH=$JAVA_6_HOME/bin:$PATH'
+alias jdk8='export JAVA_HOME=$JAVA_8_HOME ; export PATH=$JAVA_8_HOME/bin:$PATH'

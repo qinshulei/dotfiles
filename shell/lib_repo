@@ -1,0 +1,22 @@
+#!/bin/bash
+# depends on fzf(https://github.com/junegunn/fzf)
+
+function repogo(){
+    project_name=$1
+    out=$(repo list | grep "${project_name}")
+    if [ -n ${out} ];then
+        project_path=$(echo "${out}" | awk '{print $1}')
+        echo "cd ${project_path}"
+        cd "${project_path}"
+    fi
+}
+
+function repofzf(){
+    project_name=$1
+    out=$(repo list | fzf -q "${project_name}")
+    if [ -n ${out} ];then
+        project_path=$(echo "${out}" | awk '{print $1}')
+        echo "cd ${project_path}"
+        cd "${project_path}"
+    fi
+}

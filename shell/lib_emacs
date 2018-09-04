@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# emacs alias
+alias emacsd='emacs --daemon'
+alias e='emacsclient -t'
+alias ec='emacsclient -c'
+alias pe='proxychains emacs &'
+alias pemacsd='proxychains emacs --daemon'
+
+function kill-emacs(){
+    emacsclient -e "(kill-emacs)"
+    emacs_pid=$( ps -C 'emacs --daemon' -o pid= )
+    if [[ -n "${emacs_pid}" ]];then
+        kill -9 "${emacs_pid}"
+    fi
+}
+
+# [[ -z $(ps -C 'emacs --daemon' -o pid=) ]] && pemacsd
+[[ -z $(ps -C 'emacs --daemon' -o pid=) ]] && emacsd

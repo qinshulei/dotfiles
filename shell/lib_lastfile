@@ -1,0 +1,11 @@
+#!/bin/bash
+
+function cdlast() {
+    ls -rt | tail -1 | xsel -b
+    dir_name=$(xsel -b)
+    cd ${dir_name}
+}
+
+function cplast() {
+    ls -rt | tail -1 | tr -d '\n' | xsel -b
+}
