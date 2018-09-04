@@ -25,3 +25,4 @@ source /home/qinshulei/dotfiles/init.sh
 + [noti](https://github.com/variadico/noti)
 + [entr](http://www.entrproject.org/)
 + [bat](https://github.com/sharkdp/bat)
++ fpp
