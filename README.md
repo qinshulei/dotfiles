@@ -7,6 +7,10 @@ backup dotfiles
 # add to ~/.bashrc or ~/.zshrc
 source /home/qinshulei/dotfiles/init.sh
 ```
+## 目录结构
++ bin    脚手架脚本
++ shell  别名，bash函数定义，会被source
++ vendor 从网络下载额外的命令行工具
 
 ## CLI related blog
 + https://remysharp.com/2018/08/23/cli-improved
