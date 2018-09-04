@@ -26,3 +26,4 @@ source /home/qinshulei/dotfiles/init.sh
 + [entr](http://www.entrproject.org/)
 + [bat](https://github.com/sharkdp/bat)
 + fpp
++ [Bowler](https://pybowler.io/) python refactory
