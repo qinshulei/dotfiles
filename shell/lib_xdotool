@@ -1,0 +1,26 @@
+#!/bin/bash
+
+function xdotool_swap_to(){
+    # swap to chrome
+    local name="$@"
+    local PIDS=$( xdotool search --name "${name}" )
+    for the_id in ${PIDS}; do
+        xdotool windowactivate $the_id
+        xdotool sleep 1
+    done
+}
+
+function xdotool_set_size(){
+    # xdotool search chrome
+    # open a new table
+    # xdotool search chrome
+    # compare find the new window id
+    # xdotool windowactivate 71304336
+
+    TARGET="$@"
+
+    IDS=$(xdotool search --name "${TARGET}")
+    for the_id in ${IDS}; do
+        xdotool windowsize ${the_id} 1024 768
+    done
+}
