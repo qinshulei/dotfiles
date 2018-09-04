@@ -5,9 +5,9 @@ DOTFILES_ROOT=$(pwd -P)
 # TODO: install vendor tools
 # install by wget and oneline commandline.
 for install_script in $(ls ${DOTFILES_ROOT}/vendor/install-*.sh); do
-    pushd ${DOTFILES_ROOT}/vendor/bin
-    ./${install_script}
-    popd
+    pushd ${DOTFILES_ROOT}/vendor/bin > /dev/null
+    ${install_script}
+    popd > /dev/null
 done
 
 # add qinshulei dotfiles
