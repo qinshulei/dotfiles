@@ -25,3 +25,5 @@ function extract () {
         echo "'$1' is not a valid file"
     fi
 }
+
+alias wc_total_line_number='wc -l `find . -regex ".*\.\(java\|html\|js\|css\)"`'
