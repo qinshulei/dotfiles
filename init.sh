@@ -4,6 +4,7 @@ DOTFILES_ROOT=$(pwd -P)
 
 # TODO: install vendor tools
 # install by wget and oneline commandline.
+mkdir -p ${DOTFILES_ROOT}/vendor/bin
 for install_script in $(ls ${DOTFILES_ROOT}/vendor/install-*.sh); do
     pushd ${DOTFILES_ROOT}/vendor/bin > /dev/null
     ${install_script}
