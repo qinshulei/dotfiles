@@ -2,7 +2,7 @@
 
 # Take a screenshot
 # Usage: screenshot
-alias screenshot="adb exec-out screencap -p > screen-$(date -j "+%s").png"
+alias screenshot="adb exec-out screencap -p > screen-$(date "+%s").png"
 
 # Fire an intent
 # Usage: startintent https://twitter.com/nisrulz
