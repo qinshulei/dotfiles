@@ -1,0 +1,6 @@
+#!/bin/bash
+emacsclient -e "(kill-emacs)"
+emacs_pid=$( ps -C 'emacs --daemon' -o pid= )
+if [[ -n "${emacs_pid}" ]];then
+    kill -9 "${emacs_pid}"
+fi
