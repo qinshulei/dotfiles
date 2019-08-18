@@ -1,2 +1,7 @@
 #!/bin/bash
-sudo route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.168.65.1
+
+gatway_ip=$1
+
+sudo route del -net 0.0.0.0/1
+sudo route del -net 128.0.0.0/1
+sudo route add -net 192.168.0.0/16 gw ${gatway_ip}
