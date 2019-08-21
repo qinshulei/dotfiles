@@ -11,6 +11,7 @@ source /home/qinshulei/dotfiles/init.sh
 + bin    脚手架脚本
 + shell  别名，bash函数定义，会被source
 + vendor 从网络下载额外的命令行工具
++ service 启动常用开机服务
 
 ## CLI related blog
 + https://remysharp.com/2018/08/23/cli-improved

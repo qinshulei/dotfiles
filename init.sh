@@ -1,4 +1,6 @@
 #!/bin/bash -e
+ORIGIN_DIR=$(pwd)
+
 cd "$(dirname "$0")"
 DOTFILES_ROOT=$(pwd -P)
 
@@ -18,3 +20,5 @@ done
 
 # export bin and vendor/bin
 export PATH="${DOTFILES_ROOT}/bin:${DOTFILES_ROOT}/vendor/bin:$PATH"
+
+cd ${ORIGIN_DIR}
