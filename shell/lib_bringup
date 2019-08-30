@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# try_merge platform/vendor/semc/sepolicy 9c34b40415adbd5e0c1a24605ca7de599610a507 branch_name xx.xx.xx
+function try_merge(){
+    name=$1
+    revision=$2
+    branch=$3
+    version=$4
+    cd $(repo list ${name} -p)
+    git fetch --all
+    git checkout origin/${branch)
+    git merge ${revision} -v --no-ff --stat --log=300 -m "Merge delta from ${version} into ${branch}"
+}
+
+# need_rebase platform/vendor/semc/sepolicy branch_name
+function need_rebase(){
+    name=$1
+    branch=$2
+    cd $(repo list ${name} -p)
+    git fetch --all
+    git --no-pager log HEAD..origin/volatile-q-seine-mw
+    cd -
+}
