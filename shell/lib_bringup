@@ -8,8 +8,9 @@ function try_merge(){
     version=$4
     cd $(repo list ${name} -p)
     git fetch --all
-    git checkout origin/${branch)
+    git checkout origin/${branch}
     git merge ${revision} -v --no-ff --stat --log=300 -m "Merge delta from ${version} into ${branch}"
+    return 0
 }
 
 # need_rebase platform/vendor/semc/sepolicy branch_name
@@ -20,4 +21,5 @@ function need_rebase(){
     git fetch --all
     git --no-pager log HEAD..origin/volatile-q-seine-mw
     cd -
+    return 0
 }
