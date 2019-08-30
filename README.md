@@ -1,6 +1,8 @@
 # dotfiles
 backup dotfiles
 
+use oh-my-zsh as base, should config on-my-zsh first.
+
 ## useage
 ```
 # git clone dotfiles_repo
