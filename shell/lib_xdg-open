@@ -1,0 +1,11 @@
+#!/bin/bash
+
+function open_url(){
+    url=$@
+    xdg-open ${url}
+}
+
+# urls=()
+function open_urls() {
+    echo ${urls[@]} | xargs -n1 xdg-open
+}
