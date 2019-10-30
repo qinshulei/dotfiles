@@ -3,9 +3,9 @@
 
 function repogo(){
     project_name=$1
-    out=$(repo list | grep "${project_name}")
+    out=$(repo list "${project_name}" -p )
     if [ -n ${out} ];then
-        project_path=$(echo "${out}" | awk '{print $1}')
+        project_path=$(echo "${out}")
         echo "cd ${project_path}"
         cd "${project_path}"
     fi
