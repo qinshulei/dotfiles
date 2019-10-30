@@ -1,6 +1,6 @@
 #!/bin/bash
 
-gatway_ip=${1:10.8.8.29}
+gatway_ip=10.8.8.29
 
 sudo route del -net 0.0.0.0/1
 sudo route del -net 128.0.0.0/1
