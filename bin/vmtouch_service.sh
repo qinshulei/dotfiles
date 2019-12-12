@@ -1,4 +1,3 @@
 #!/bin/bash
 
-vmtouch -dl ~/.emacs.d
-vmtouch -dl ~/.spacemacs.d
+vmtouch -dl -i .git -i .repo -i .cache ~/.emacs.d ~/.spacemacs.d
